@@ -5,6 +5,7 @@ const todoListContainer = document.querySelector('.todo_list');
 // Add functions
 function displayTodoDOM(todo) {
   const liElem = document.createElement("li");
+  liElem.classList.add('bounceIn');
   liElem.innerHTML = `
     <span class="text">${todo}</span>
     <div class="options">
