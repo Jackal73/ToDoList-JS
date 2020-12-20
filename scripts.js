@@ -29,7 +29,12 @@ function storeToLocalStorage(todo) {
   localStorage.setItem("todos",JSON.stringify(todoArr));
 }
 
-
+function displayDataFromLocalStorage() {
+  const todoArr = JSON.parse(localStorage.getItem("todos"));
+  for (const todo of todoArr) {
+    displayTodoDOM(todo);
+  }
+}
 
 
 
