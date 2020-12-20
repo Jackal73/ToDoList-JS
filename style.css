@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(ellipse at center, #175ca7, #50455c);
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 40px;
+}
+
+.wrap {
+    width: 80%;
+    margin: auto;
+}
+
+/* header */
+.todo_header {
+    background-image: linear-gradient(to right bottom, rgba(121, 111, 231, 0.5), rgba(37, 99, 96, 0.8)), url('https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
+    background-size: cover;
+    padding: 50px;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.todo_header .overflow {
+    overflow: hidden;
+    transform: translateX(10px);
+}
+
+.todo_header .overflow h1 {
+    margin: 0;
+    animation: slideInDate 0.5s ease both;
+}
+
+.todo_header .overflow #todaysDate {
+    transform: translateX(-96px);
+    display: block;
+    animation: slideInDate 0.4s 0.1s both;
+}
+
+@keyframes slideInDate {
+    0% {
+        transform: translateX(-249px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
