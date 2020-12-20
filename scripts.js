@@ -36,15 +36,9 @@ function displayDataFromLocalStorage() {
   }
 }
 
-
-
-
-
-
-
-
-
 // Add event listener
+document.addEventListener("DOMContentLoaded", displayDataFromLocalStorage);
+
 formElem.addEventListener('submit', (e) => {
   e.preventDefault();
   const inputTodo = todoInputElem.value;
