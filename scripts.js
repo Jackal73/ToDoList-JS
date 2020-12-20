@@ -2,7 +2,7 @@ const formElem = document.getElementById('form');
 const todoInputElem = document.getElementById('todoInput');
 const todoListContainer = document.querySelector('.todo_list');
 
-// Add functions
+// Add functions - Display 'todo list'
 function displayTodoDOM(todo) {
   const liElem = document.createElement("li");
   liElem.classList.add('bounceIn');
@@ -17,6 +17,25 @@ function displayTodoDOM(todo) {
   todoListContainer.appendChild(liElem);
 }
 
+// Add functions - 'local storage'
+function storeToLocalStorage(todo) {
+  let todoArr;
+  if (localStorage.getItem("todos") === null) {
+    todoArr = [];
+  } else {
+    todoArr = JSON.parse(localStorage.getItem("todos"));
+  }
+  todoArr.push(todo);
+  localStorage.setItem("todos",JSON.stringify(todoArr));
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -28,6 +47,6 @@ formElem.addEventListener('submit', (e) => {
     alert("Please enter a 'todo' item!");
   } else {
     displayTodoDOM(inputTodo);
+    storeToLocalStorage(inputTodo);
   }
-  console.log(inputTodo);
 });
