@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="todo">
+    <div class="container">
+        <header class="todo_header">
+            <div class="overflow">
+                <h1><span id="todaysDay">Saturday</span> Todo's</h1>
+                <span id="todaysDate">Dec 19, 2020</span>
+            </div>
+        </header>
+        <div class="todo_input wrap">
+            <form action="" id="form">
+                <input type="text" id="todoInput" placeholder="Enter todo for the day">
+                <button class="todo_btn">Add</button>
+            </form>
+        </div>
+        <ul class="todo_list wrap">
+
+            <!-- Generate with JavaScript -->
+            <li>
+                <span class="text">Hello</span>
+                <div class="options">
+                    <span id="check"><i class="fa fa-check"></i></span>
+                    <span id="edit"><i class="fa fa-edit"></i></span>
+                    <span id="trash"><i class="fa fa-trash"></i></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
