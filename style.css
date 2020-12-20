@@ -71,3 +71,35 @@ ul {
         transform: translateX(0);
     }
 }
+
+/* todo_input */
+.todo_input {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px #777;
+    background: #fff;
+    transform: translateY(-40%);
+}
+
+.todo_input input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    outline: none;
+    display: inline-block;
+}
+
+.todo_input input::placeholder {
+    font-family: "Montserrat", sans-serif;
+}
+
+.todo_input .todo_btn {
+    position: absolute;
+    display: inline-block;
+    border: none;
+    padding: 12px;
+    background-color: cadetblue;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
