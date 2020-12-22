@@ -151,6 +151,10 @@ ul {
     background-color: coral;
 }
 
+.completed {
+    text-decoration: line-through;
+}
+
 .todo_list .options span:hover:nth-child(3) {
     background-color: crimson;
 }

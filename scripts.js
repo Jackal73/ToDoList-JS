@@ -41,6 +41,13 @@ function itemToEdit(item) {
   }
 }
 
+function itemDone(item) {
+  if (item.classList.contains("fa-check") || item.id === "check") {
+    const crossItem = item.closest("li");
+    crossItem.firstElementChild.classList.add("completed");
+    crossItem.classList.add('rotateOutDownLeft');
+  }
+}
 
 
 
@@ -85,6 +92,7 @@ document.addEventListener("DOMContentLoaded", displayDataFromLocalStorage);
 todoListContainer.addEventListener("click", (e) => {
   itemToDelete(e.target);
   itemToEdit(e.target);
+  itemDone(e.target);
 })
 
 formElem.addEventListener('submit', (e) => {
