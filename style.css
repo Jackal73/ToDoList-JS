@@ -27,7 +27,7 @@ ul {
 }
 
 .container {
-    background: white;
+    background: #899194;
     width: 100%;
     border-radius: 20px;
     padding-bottom: 40px;
@@ -43,7 +43,7 @@ ul {
     background-image: linear-gradient(to right bottom, rgba(121, 111, 231, 0.5), rgba(37, 99, 96, 0.8)), url('https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
     background-size: cover;
     padding: 50px;
-    color: #fff;
+    color: #eece1a;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -77,8 +77,8 @@ ul {
 .todo_input {
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 1px 10px #777;
-    background: #fff;
+    box-shadow: 0 1px 10px #373737;
+    background: #949393;
     transform: translateY(-40%);
 }
 
@@ -98,19 +98,19 @@ ul {
     display: inline-block;
     border: none;
     padding: 12px;
-    background-color: cadetblue;
+    background-color: dimgrey;
     text-transform: uppercase;
     outline: none;
     cursor: pointer;
-    color: #fff;
+    color: #eece1a;
 }
 
 /* todo_list */
 .todo_list li {
     display: flex;
     align-items: center;
-    background-color: #655e75;
-    color: #fff;
+    background-color: dimgrey;
+    color: #eece1a;
     margin: 10px 0;
     border-radius: 5px;
     width: 100%;
@@ -281,8 +281,8 @@ ul {
 .rotateOutDownLeft {
     -webkit-animation-name: rotateOutDownLeft;
     animation-name: rotateOutDownLeft;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
