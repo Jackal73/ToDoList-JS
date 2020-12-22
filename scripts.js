@@ -17,7 +17,7 @@ function displayTodoDOM(todo) {
   todoListContainer.appendChild(liElem);
 }
 
-// Add functions - 'todo list container' (add, edit, and delete)
+ // Add functions - 'todo list container' (add, edit, and delete)
 function itemToDelete(item) {
   if (item.classList.contains("fa-trash") || item.id === "trash") {
     const todoLiElem = item.closest("li");
@@ -27,6 +27,8 @@ function itemToDelete(item) {
     setTimeout(() => {
       todoLiElem.remove();
     }, 1000);
+
+    deleteDataFromLocalStorage(item);
   }
 }
 
@@ -49,7 +51,19 @@ function displayDataFromLocalStorage() {
   }
 }
 
-// Add event listener
+function deleteDataFromLocalStorage(item) {
+  const todoArr = JSON.parse(localStorage.getItem("todos"));
+  const todoLiElem = item.closest("li");
+
+  const todoItemLeft = todoArr.filter(todo => todoLiElem.textContent.trim() !== todo
+  );
+
+  localStorage.setItem("todos", JSON.stringify(todoItemLeft));
+
+  console.log(todoItemInput);
+}
+
+// Add event listeners
 document.addEventListener("DOMContentLoaded", displayDataFromLocalStorage);
 
 todoListContainer.addEventListener("click", (e) => {
