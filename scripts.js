@@ -1,3 +1,36 @@
+const date = new Date();
+const todaysDay = document.getElementById('todaysDay');
+const todaysDate = document.getElementById('todaysDate');
+
+const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
+
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+];
+
+todaysDay.textContent = days[date.getDay()];
+
+todaysDate.textContent = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+
 const formElem = document.getElementById('form');
 const todoInputElem = document.getElementById('todoInput');
 const todoListContainer = document.querySelector('.todo_list');
