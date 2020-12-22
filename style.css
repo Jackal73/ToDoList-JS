@@ -281,8 +281,8 @@ ul {
 .rotateOutDownLeft {
     -webkit-animation-name: rotateOutDownLeft;
     animation-name: rotateOutDownLeft;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
