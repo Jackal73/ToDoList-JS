@@ -17,6 +17,15 @@ function displayTodoDOM(todo) {
   todoListContainer.appendChild(liElem);
 }
 
+// Add functions - 'todo list container' (add, edit, and delete)
+function itemToDelete(item) {
+  if (item.classList.contains("fa-trash") || item.id === "trash") {
+    const todoLiElem = item.closest("li");
+    todoLiElem.classList.remove("bounceIn");
+
+  }
+}
+
 // Add functions - 'local storage'
 function storeToLocalStorage(todo) {
   let todoArr;
@@ -26,7 +35,7 @@ function storeToLocalStorage(todo) {
     todoArr = JSON.parse(localStorage.getItem("todos"));
   }
   todoArr.push(todo);
-  localStorage.setItem("todos",JSON.stringify(todoArr));
+  localStorage.setItem("todos", JSON.stringify(todoArr));
 }
 
 function displayDataFromLocalStorage() {
@@ -38,6 +47,10 @@ function displayDataFromLocalStorage() {
 
 // Add event listener
 document.addEventListener("DOMContentLoaded", displayDataFromLocalStorage);
+
+todoListContainer.addEventListener("click", (e) => {
+  itemToDelete(e.target);
+})
 
 formElem.addEventListener('submit', (e) => {
   e.preventDefault();
