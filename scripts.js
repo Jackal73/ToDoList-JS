@@ -22,7 +22,11 @@ function itemToDelete(item) {
   if (item.classList.contains("fa-trash") || item.id === "trash") {
     const todoLiElem = item.closest("li");
     todoLiElem.classList.remove("bounceIn");
+    todoLiElem.classList.add("bounceOutDown");
 
+    setTimeout(() => {
+      todoLiElem.remove();
+    }, 1000);
   }
 }
 
