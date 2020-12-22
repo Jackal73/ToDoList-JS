@@ -46,6 +46,12 @@ function itemDone(item) {
     const crossItem = item.closest("li");
     crossItem.firstElementChild.classList.add("completed");
     crossItem.classList.add('rotateOutDownLeft');
+
+    crossItem.addEventListener('transitionend', () => {
+      crossItem.remove();
+    })
+
+    deleteDataFromLocalStorage(item);
   }
 }
 
