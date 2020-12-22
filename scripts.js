@@ -37,7 +37,7 @@ function itemToEdit(item) {
     const todoLiElem = item.closest("li");
     todoInputElem.value = todoLiElem.textContent.trim();
     todoLiElem.remove();
-
+    editItemFromLocalStorage(item);
   }
 }
 
@@ -73,6 +73,10 @@ function deleteDataFromLocalStorage(item) {
   localStorage.setItem("todos", JSON.stringify(todoItemLeft));
 
   // console.log(todoItemInput);
+}
+
+function editItemFromLocalStorage(item) {
+  deleteDataFromLocalStorage(item);
 }
 
 // Add event listeners
