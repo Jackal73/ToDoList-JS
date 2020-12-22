@@ -60,7 +60,7 @@ function deleteDataFromLocalStorage(item) {
 
   localStorage.setItem("todos", JSON.stringify(todoItemLeft));
 
-  console.log(todoItemInput);
+  // console.log(todoItemInput);
 }
 
 // Add event listeners
@@ -79,4 +79,5 @@ formElem.addEventListener('submit', (e) => {
     displayTodoDOM(inputTodo);
     storeToLocalStorage(inputTodo);
   }
+  formElem.reset();
 });
