@@ -17,7 +17,7 @@ function displayTodoDOM(todo) {
   todoListContainer.appendChild(liElem);
 }
 
- // Add functions - 'todo list container' (add, edit, and delete)
+ // Add functions - 'todoList container' (add, edit, and delete)
 function itemToDelete(item) {
   if (item.classList.contains("fa-trash") || item.id === "trash") {
     const todoLiElem = item.closest("li");
@@ -31,6 +31,18 @@ function itemToDelete(item) {
     deleteDataFromLocalStorage(item);
   }
 }
+
+function itemToEdit(item) {
+  if (item.classList.contains("fa-edit") || item.id === "edit") {
+    const todoLiElem = item.closest("li");
+    todoInputElem.value = todoLiElem.textContent.trim();
+    todoLiElem.remove();
+
+  }
+}
+
+
+
 
 // Add functions - 'local storage'
 function storeToLocalStorage(todo) {
@@ -68,6 +80,7 @@ document.addEventListener("DOMContentLoaded", displayDataFromLocalStorage);
 
 todoListContainer.addEventListener("click", (e) => {
   itemToDelete(e.target);
+  itemToEdit(e.target);
 })
 
 formElem.addEventListener('submit', (e) => {
